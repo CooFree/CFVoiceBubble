@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFVoiceBubble.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet CFVoiceBubble *bubble1;
+@property (weak, nonatomic) IBOutlet CFVoiceBubble *bubble2;
+@property (weak, nonatomic) IBOutlet CFVoiceBubble *bubble3;
+@property (weak, nonatomic) IBOutlet CFVoiceBubble *bubble4;
 
 @end
 

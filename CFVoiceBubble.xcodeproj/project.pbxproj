@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B802A6B81F05EB59004C3DDB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802A6B71F05EB59004C3DDB /* TableViewController.m */; };
+		B802A6BB1F05EBD2004C3DDB /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B802A6BA1F05EBD2004C3DDB /* TableViewCell.m */; };
 		B84E27A01F04F3D8007C5326 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E279F1F04F3D8007C5326 /* AppDelegate.m */; };
 		B84E27A31F04F3D8007C5326 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E27A21F04F3D8007C5326 /* ViewController.m */; };
 		B84E27A61F04F3D8007C5326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84E27A41F04F3D8007C5326 /* Main.storyboard */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B802A6B61F05EB59004C3DDB /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B802A6B71F05EB59004C3DDB /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B802A6B91F05EBD2004C3DDB /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		B802A6BA1F05EBD2004C3DDB /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		B802A6C31F05F970004C3DDB /* Let.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Let.mp3; sourceTree = "<group>"; };
 		B84E279B1F04F3D8007C5326 /* CFVoiceBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFVoiceBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84E279E1F04F3D8007C5326 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B84E279F1F04F3D8007C5326 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,11 +40,6 @@
 		B84E27B91F04F967007C5326 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		B84E27C81F052287007C5326 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		B84E27C91F052287007C5326 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		B84E27CA1F052291007C5326 /* fs_icon_wave_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_1@2x.png"; sourceTree = "<group>"; };
-		B84E27CB1F052291007C5326 /* fs_icon_wave_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_0@2x.png"; sourceTree = "<group>"; };
-		B84E27CC1F052291007C5326 /* fs_icon_wave_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_2@2x.png"; sourceTree = "<group>"; };
-		B84E27CD1F052291007C5326 /* fs_chat_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_chat_bubble@2x.png"; sourceTree = "<group>"; };
-		B84E27CE1F0522AD007C5326 /* Let It Go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let It Go.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +76,13 @@
 				B84E279F1F04F3D8007C5326 /* AppDelegate.m */,
 				B84E27A11F04F3D8007C5326 /* ViewController.h */,
 				B84E27A21F04F3D8007C5326 /* ViewController.m */,
+				B802A6B61F05EB59004C3DDB /* TableViewController.h */,
+				B802A6B71F05EB59004C3DDB /* TableViewController.m */,
+				B802A6B91F05EBD2004C3DDB /* TableViewCell.h */,
+				B802A6BA1F05EBD2004C3DDB /* TableViewCell.m */,
+				B802A6C31F05F970004C3DDB /* Let.mp3 */,
 				B84E27C81F052287007C5326 /* 2.jpg */,
 				B84E27C91F052287007C5326 /* 1.jpg */,
-				B84E27CE1F0522AD007C5326 /* Let It Go.mp3 */,
-				B84E27CD1F052291007C5326 /* fs_chat_bubble@2x.png */,
-				B84E27CB1F052291007C5326 /* fs_icon_wave_0@2x.png */,
-				B84E27CA1F052291007C5326 /* fs_icon_wave_1@2x.png */,
-				B84E27CC1F052291007C5326 /* fs_icon_wave_2@2x.png */,
 				B84E27B41F04F8F2007C5326 /* CFVoiceBubble */,
 				B84E27A41F04F3D8007C5326 /* Main.storyboard */,
 				B84E27A71F04F3D8007C5326 /* Assets.xcassets */,
@@ -173,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84E27A31F04F3D8007C5326 /* ViewController.m in Sources */,
+				B802A6BB1F05EBD2004C3DDB /* TableViewCell.m in Sources */,
 				B84E27B71F04F923007C5326 /* CFVoiceBubble.m in Sources */,
 				B84E27AE1F04F3D8007C5326 /* main.m in Sources */,
+				B802A6B81F05EB59004C3DDB /* TableViewController.m in Sources */,
 				B84E27A01F04F3D8007C5326 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

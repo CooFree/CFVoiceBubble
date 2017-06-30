@@ -49,7 +49,7 @@
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:self.waveColor]  forState:UIControlStateNormal];
+//    [button setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:self.waveColor]  forState:UIControlStateNormal];
     [button setBackgroundImage:UIImageNamed(@"fs_chat_bubble") forState:UIControlStateNormal];
     [button setTitle:@"0\"" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -119,7 +119,7 @@
 {
     if (![_waveColor isEqual:waveColor]) {
         _waveColor = waveColor;
-        [_contentButton setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:waveColor]  forState:UIControlStateNormal];
+//        [_contentButton setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:waveColor]  forState:UIControlStateNormal];
     }
 }
 
@@ -249,10 +249,10 @@
 - (void)startAnimating
 {
     if (!_contentButton.imageView.isAnimating) {
-        UIImage *image0 = [UIImageNamed(@"fs_icon_wave_0") imageWithOverlayColor:_animatingWaveColor];
-        UIImage *image1 = [UIImageNamed(@"fs_icon_wave_1") imageWithOverlayColor:_animatingWaveColor];
-        UIImage *image2 = [UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:_animatingWaveColor];
-        _contentButton.imageView.animationImages = @[image0, image1, image2];
+//        UIImage *image0 = [UIImageNamed(@"fs_icon_wave_0") imageWithOverlayColor:_animatingWaveColor];
+//        UIImage *image1 = [UIImageNamed(@"fs_icon_wave_1") imageWithOverlayColor:_animatingWaveColor];
+//        UIImage *image2 = [UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:_animatingWaveColor];
+//        _contentButton.imageView.animationImages = @[image0, image1, image2];
         [_contentButton.imageView startAnimating];
     }
 }
@@ -293,7 +293,7 @@
 }
 
 #pragma mark - 1️⃣➢➢➢ Private
-#pragma mark - 1️⃣➢➢➢ <#mark#>
+
 - (void)showError:(NSString *)error
 {
     [[[UIAlertView alloc] initWithTitle:@"FSVoiceBubble" message:@"error" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil] show];
