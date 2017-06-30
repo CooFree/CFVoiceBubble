@@ -31,6 +31,13 @@
 		B84E27B61F04F923007C5326 /* CFVoiceBubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFVoiceBubble.m; sourceTree = "<group>"; };
 		B84E27B81F04F967007C5326 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		B84E27B91F04F967007C5326 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		B84E27C81F052287007C5326 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		B84E27C91F052287007C5326 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		B84E27CA1F052291007C5326 /* fs_icon_wave_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_1@2x.png"; sourceTree = "<group>"; };
+		B84E27CB1F052291007C5326 /* fs_icon_wave_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_0@2x.png"; sourceTree = "<group>"; };
+		B84E27CC1F052291007C5326 /* fs_icon_wave_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_icon_wave_2@2x.png"; sourceTree = "<group>"; };
+		B84E27CD1F052291007C5326 /* fs_chat_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fs_chat_bubble@2x.png"; sourceTree = "<group>"; };
+		B84E27CE1F0522AD007C5326 /* Let It Go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let It Go.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +74,13 @@
 				B84E279F1F04F3D8007C5326 /* AppDelegate.m */,
 				B84E27A11F04F3D8007C5326 /* ViewController.h */,
 				B84E27A21F04F3D8007C5326 /* ViewController.m */,
+				B84E27C81F052287007C5326 /* 2.jpg */,
+				B84E27C91F052287007C5326 /* 1.jpg */,
+				B84E27CE1F0522AD007C5326 /* Let It Go.mp3 */,
+				B84E27CD1F052291007C5326 /* fs_chat_bubble@2x.png */,
+				B84E27CB1F052291007C5326 /* fs_icon_wave_0@2x.png */,
+				B84E27CA1F052291007C5326 /* fs_icon_wave_1@2x.png */,
+				B84E27CC1F052291007C5326 /* fs_icon_wave_2@2x.png */,
 				B84E27B41F04F8F2007C5326 /* CFVoiceBubble */,
 				B84E27A41F04F3D8007C5326 /* Main.storyboard */,
 				B84E27A71F04F3D8007C5326 /* Assets.xcassets */,
