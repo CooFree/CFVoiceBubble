@@ -8,7 +8,6 @@
 
 #import "CFVoiceBubble.h"
 #import <AVFoundation/AVFoundation.h>
-#import "UIImage+Extension.h"
 
 #define kCFVoiceBubbleShouldStopNotification @"CFVoiceBubbleShouldStopNotification"
 #define UIImageNamed(imageName) [[UIImage imageNamed:[NSString stringWithFormat:@"%@", imageName]] imageWithRenderingMode:UIImageRenderingModeAutomatic]
@@ -48,9 +47,16 @@
     self.waveColor = [UIColor colorWithRed:0/255.0 green:102/255.0 blue:51/255.0 alpha:1.0];
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:self.waveColor]  forState:UIControlStateNormal];
-    [button setBackgroundImage:UIImageNamed(@"fs_chat_bubble") forState:UIControlStateNormal];
+    //    [button setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:self.waveColor]  forState:UIControlStateNormal];
+    [button setImage:UIImageNamed(@"集赞语音06") forState:UIControlStateNormal];
+    [button setImage:UIImageNamed(@"集赞语音06") forState:UIControlStateHighlighted];
+
+
+    UIImage *buttonImageNomal=[UIImage imageNamed:@"集赞语音"];
+    UIImage *stretchableButtonImageNomal=[buttonImageNomal stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+    [button setBackgroundImage:stretchableButtonImageNomal forState:UIControlStateNormal];
+
+    //    [button setBackgroundImage:[UIImage imageNamed:@"集赞语音"] forState:UIControlStateNormal];
     [button setTitle:@"0\"" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(voiceClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -119,7 +125,7 @@
 {
     if (![_waveColor isEqual:waveColor]) {
         _waveColor = waveColor;
-//        [_contentButton setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:waveColor]  forState:UIControlStateNormal];
+        //        [_contentButton setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:waveColor]  forState:UIControlStateNormal];
     }
 }
 
@@ -174,7 +180,9 @@
     if (self.isLoad==NO) {
 
         NSString *docDirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        NSString *filePath = [NSString stringWithFormat:@"%@/%@.mp4", docDirPath , @"temp"];
+        //        NSString *filePath = [NSString stringWithFormat:@"%@/%@.mp4", docDirPath , @"temp"];
+        NSString *filePath = [NSString stringWithFormat:@"%@/%@.mp4", docDirPath , [_URLStr substringWithRange:NSMakeRange(_URLStr.length-10, 6)]];
+
 
         // 要检查的文件目录
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -212,22 +220,24 @@
 {
     if (![_contentURL isEqual:contentURL]) {
         _contentURL = contentURL;
-        _asset = [[AVURLAsset alloc] initWithURL:_contentURL options:nil];
-        CMTime duration = _asset.duration;
-        NSInteger seconds = CMTimeGetSeconds(duration);
-        NSError *error;
-        if (seconds > 60) {
-            error = [NSError errorWithDomain:@"A voice audio should't last longer than 60 seconds" code:300 userInfo:nil];
-        }
-        NSString *title = [NSString stringWithFormat:@"%@\"",@(seconds)];
-        [_contentButton setTitle:title forState:UIControlStateNormal];
-        NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
-        CGFloat titleWidth = [[[NSAttributedString alloc] initWithString:title attributes:attributes] size].width;
+        /*
+         _asset = [[AVURLAsset alloc] initWithURL:_contentURL options:nil];
+         CMTime duration = _asset.duration;
+         NSInteger seconds = CMTimeGetSeconds(duration);
+         NSError *error;
+         if (seconds > 60) {
+         error = [NSError errorWithDomain:@"A voice audio should't last longer than 60 seconds" code:300 userInfo:nil];
+         }
+         NSString *title = [NSString stringWithFormat:@"%@\"",@(seconds)];
+         [_contentButton setTitle:title forState:UIControlStateNormal];
+         NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+         CGFloat titleWidth = [[[NSAttributedString alloc] initWithString:title attributes:attributes] size].width;
 
-        _contentButton.titleEdgeInsets = UIEdgeInsetsMake(0,
-                                                          self.bounds.size.width - 5 - [_contentButton imageForState:UIControlStateNormal].size.width - titleWidth - 2.5,
-                                                          0,
-                                                          0);
+         _contentButton.titleEdgeInsets = UIEdgeInsetsMake(0,
+         self.bounds.size.width - 5 - [_contentButton imageForState:UIControlStateNormal].size.width - titleWidth - 2.5,
+         0,
+         0);
+         */
     }
 }
 
@@ -249,10 +259,18 @@
 - (void)startAnimating
 {
     if (!_contentButton.imageView.isAnimating) {
-//        UIImage *image0 = [UIImageNamed(@"fs_icon_wave_0") imageWithOverlayColor:_animatingWaveColor];
-//        UIImage *image1 = [UIImageNamed(@"fs_icon_wave_1") imageWithOverlayColor:_animatingWaveColor];
-//        UIImage *image2 = [UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:_animatingWaveColor];
-//        _contentButton.imageView.animationImages = @[image0, image1, image2];
+        //        UIImage *image0 = [UIImageNamed(@"fs_icon_wave_0") imageWithOverlayColor:_animatingWaveColor];
+        //        UIImage *image1 = [UIImageNamed(@"fs_icon_wave_1") imageWithOverlayColor:_animatingWaveColor];
+        //        UIImage *image2 = [UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:_animatingWaveColor];
+        //        _contentButton.imageView.animationImages = @[image0, image1, image2];
+        UIImage *image1 = UIImageNamed(@"集赞语音01");
+        UIImage *image2 = UIImageNamed(@"集赞语音02");
+        UIImage *image3 = UIImageNamed(@"集赞语音03");
+        UIImage *image4 = UIImageNamed(@"集赞语音04");
+        UIImage *image5 = UIImageNamed(@"集赞语音05");
+        UIImage *image6 = UIImageNamed(@"集赞语音06");
+        _contentButton.imageView.animationImages = @[image1, image2, image3,image4,image5,image6];
+
         [_contentButton.imageView startAnimating];
     }
 }
@@ -269,7 +287,7 @@
     if (!_player) {
         [self prepareToPlay];
     }
-    if (!_player.playing) {
+    if (!_player.playing&&_player) {
         [_player play];
         [self startAnimating];
     }
@@ -296,10 +314,13 @@
 
 - (void)showError:(NSString *)error
 {
-    [[[UIAlertView alloc] initWithTitle:@"FSVoiceBubble" message:@"error" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil] show];
+//    MyLog(@"FSVoiceBubble error");
+    //    [[[UIAlertView alloc] initWithTitle:@"FSVoiceBubble" message:@"error" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil] show];
 }
 
 @end
+
+
 
 
 
