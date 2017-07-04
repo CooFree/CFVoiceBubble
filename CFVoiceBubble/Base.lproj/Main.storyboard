@@ -149,6 +149,9 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-Xy-AaZ" customClass="CFVoiceBubble">
                                             <rect key="frame" x="87" y="13" width="64" height="33"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="PA1-cZ-7o0" id="2Fv-ag-V8G"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -180,6 +183,9 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ra-eH-8Pu" customClass="CFVoiceBubble">
                                             <rect key="frame" x="225" y="13" width="64" height="33"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="PA1-cZ-7o0" id="c5v-xO-8Ey"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <constraints>

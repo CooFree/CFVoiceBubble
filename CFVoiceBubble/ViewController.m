@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *urlStr = @"http://baobab.wdjcdn.com/14564977406580.mp4";
+    NSString *urlStr = @"http://up.mcyt.net/md5/53/NTkwNzI2Nw_Qq4329912.mp3";
 
 
     //    _bubble1.contentURL = [NSURL fileURLWithPath:filePath];

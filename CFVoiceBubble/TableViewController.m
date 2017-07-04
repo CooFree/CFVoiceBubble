@@ -43,7 +43,7 @@
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell_invert"];
     }
-    cell.img.image = [UIImage imageNamed:invert ? @"bef.jpg" : @"mt.jpg"];
+    cell.img.image = [UIImage imageNamed:invert ? @"1.jpg" : @"2.jpg"];
     cell.bubble.contentURL = [[NSBundle mainBundle] URLForResource:@"Let It Go" withExtension:@"mp3"];
     cell.bubble.isLoad=YES;
     cell.bubble.tag = indexPath.row;

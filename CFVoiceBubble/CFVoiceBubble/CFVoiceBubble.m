@@ -48,17 +48,18 @@
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     //    [button setImage:[UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:self.waveColor]  forState:UIControlStateNormal];
-    [button setImage:UIImageNamed(@"集赞语音06") forState:UIControlStateNormal];
-    [button setImage:UIImageNamed(@"集赞语音06") forState:UIControlStateHighlighted];
+    [button setImage:UIImageNamed(@"fs_icon_wave_2") forState:UIControlStateNormal];
+    [button setImage:UIImageNamed(@"fs_icon_wave_2") forState:UIControlStateHighlighted];
 
 
-    UIImage *buttonImageNomal=[UIImage imageNamed:@"集赞语音"];
+    UIImage *buttonImageNomal=[UIImage imageNamed:@"fs_chat_bubble"];
     UIImage *stretchableButtonImageNomal=[buttonImageNomal stretchableImageWithLeftCapWidth:12 topCapHeight:0];
     [button setBackgroundImage:stretchableButtonImageNomal forState:UIControlStateNormal];
 
     //    [button setBackgroundImage:[UIImage imageNamed:@"集赞语音"] forState:UIControlStateNormal];
     [button setTitle:@"0\"" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+    [button setTitleColor:[UIColor colorWithRed:255/255.0 green:63/255.0 blue:139/255.0 alpha:255/255.0] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(voiceClicked:) forControlEvents:UIControlEventTouchUpInside];
     button.backgroundColor                = [UIColor clearColor];
     button.titleLabel.font                = [UIFont systemFontOfSize:12];
@@ -111,6 +112,11 @@
         self.layer.transform = _invert ? CATransform3DMakeRotation(M_PI, 0, 1.0, 0) : CATransform3DIdentity;
         _contentButton.titleLabel.layer.transform = _invert ? CATransform3DMakeRotation(M_PI, 0.0, 1.0, 0.0) : CATransform3DIdentity;
 
+    }else {
+        _contentButton.imageEdgeInsets = UIEdgeInsetsMake(0,
+                                                          -self.bounds.size.width + 40,
+                                                          0,
+                                                          self.bounds.size.width - 40);
     }
 }
 
@@ -220,6 +226,8 @@
 {
     if (![_contentURL isEqual:contentURL]) {
         _contentURL = contentURL;
+
+
         /*
          _asset = [[AVURLAsset alloc] initWithURL:_contentURL options:nil];
          CMTime duration = _asset.duration;
@@ -263,13 +271,7 @@
         //        UIImage *image1 = [UIImageNamed(@"fs_icon_wave_1") imageWithOverlayColor:_animatingWaveColor];
         //        UIImage *image2 = [UIImageNamed(@"fs_icon_wave_2") imageWithOverlayColor:_animatingWaveColor];
         //        _contentButton.imageView.animationImages = @[image0, image1, image2];
-        UIImage *image1 = UIImageNamed(@"集赞语音01");
-        UIImage *image2 = UIImageNamed(@"集赞语音02");
-        UIImage *image3 = UIImageNamed(@"集赞语音03");
-        UIImage *image4 = UIImageNamed(@"集赞语音04");
-        UIImage *image5 = UIImageNamed(@"集赞语音05");
-        UIImage *image6 = UIImageNamed(@"集赞语音06");
-        _contentButton.imageView.animationImages = @[image1, image2, image3,image4,image5,image6];
+
 
         [_contentButton.imageView startAnimating];
     }
